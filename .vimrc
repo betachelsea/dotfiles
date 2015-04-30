@@ -148,6 +148,7 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=235
 NeoBundle 'vim-scripts/AnsiEsc.vim' " ログファイル色付け
 NeoBundle 'kchmck/vim-coffee-script' " for .coffee
 NeoBundle 'slim-template/vim-slim.git' " for .slim
+NeoBundle 'elzr/vim-json' " for JSON
 
 call neobundle#end()
 filetype plugin indent on
