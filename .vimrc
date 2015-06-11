@@ -145,10 +145,14 @@ let g:indent_guides_auto_colors = 0
 let g:indent_guides_guide_size = 1
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=233
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=235
+NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'vim-scripts/AnsiEsc.vim' " ログファイル色付け
 NeoBundle 'kchmck/vim-coffee-script' " for .coffee
 NeoBundle 'slim-template/vim-slim.git' " for .slim
 NeoBundle 'elzr/vim-json' " for JSON
+NeoBundle 'digitaltoad/vim-jade' " for Jade, TODO: $ sudo npm install -g jade
+NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}} " for javascript
+
 
 call neobundle#end()
 filetype plugin indent on
