@@ -152,7 +152,7 @@ NeoBundle 'slim-template/vim-slim.git' " for .slim
 NeoBundle 'elzr/vim-json' " for JSON
 NeoBundle 'digitaltoad/vim-jade' " for Jade, TODO: $ sudo npm install -g jade
 NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}} " for javascript
-
+NeoBundle 'vim-ruby/vim-ruby' " for ruby
 
 call neobundle#end()
 filetype plugin indent on
