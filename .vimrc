@@ -115,7 +115,8 @@ autocmd FileType ruby set omnifunc=rubycomplete#Complete
 autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
 autocmd FileType markdown hi! def link markdownItalic LineNr
 " coffeeファイルタイプ
-au BufRead,BufNewFile,BufReadPre *.coffee set filetype=coffee
+autocmd BufRead,BufNewFile,BufReadPre *.coffee set filetype=coffee
+autocmd BufNewFile,BufRead *.{jsx*} set filetype=javascript
 
 "*--------------NeoBundle---------------*
 set nocompatible  " be iMproved
