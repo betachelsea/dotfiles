@@ -102,22 +102,6 @@ endif
 let g:neocomplcache_delimiter_patterns.vim = ['#']
 let g:neocomplcache_delimiter_patterns.cpp = ['::']
 
-" Enable omni completion.
-autocmd FileType python set omnifunc=pythoncomplete#Complete
-autocmd FileType javascript setl omnifunc=jscomplete#CompleteJS
-autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
-autocmd FileType php set omnifunc=phpcomplete#CompletePHP
-autocmd FileType c set omnifunc=ccomplete#Complete
-autocmd FileType ruby set omnifunc=rubycomplete#Complete
-".mdファイルをMarkdownとして扱う
-autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
-autocmd FileType markdown hi! def link markdownItalic LineNr
-" coffeeファイルタイプ
-autocmd BufRead,BufNewFile,BufReadPre *.coffee set filetype=coffee
-autocmd BufNewFile,BufRead *.{jsx*} set filetype=javascript
-
 "*--------------NeoBundle---------------*
 set nocompatible  " be iMproved
 filetype off
@@ -160,3 +144,20 @@ call neobundle#end()
 filetype plugin indent on
 filetype indent on
 syntax on
+
+" Enable omni completion.
+autocmd FileType python set omnifunc=pythoncomplete#Complete
+autocmd FileType javascript setl omnifunc=jscomplete#CompleteJS
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+autocmd FileType c set omnifunc=ccomplete#Complete
+autocmd FileType ruby set omnifunc=rubycomplete#Complete
+".mdファイルをMarkdownとして扱う
+autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
+autocmd FileType markdown hi! def link markdownItalic LineNr
+" coffeeファイルタイプ
+autocmd BufRead,BufNewFile,BufReadPre *.coffee set filetype=coffee
+autocmd BufNewFile,BufRead *.{jsx*} set filetype=javascript
+
