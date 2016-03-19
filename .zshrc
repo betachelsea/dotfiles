@@ -1,6 +1,8 @@
 export ZSH=$HOME/.oh-my-zsh
 export PGDATA=/usr/local/var/postgres
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export ANDROID_TOOLS=$HOME/Library/Android/sdk/platform-tools
+export NODEBREW=$HOME/.nodebrew/current/bin
+export PATH=$HOME/bin:/usr/local/bin:$ANDROID_TOOLS:$NODEBREW:$PATH
 
 ZSH_THEME="amuse"
 plugins=(git ruby osx bundler brew rails)
