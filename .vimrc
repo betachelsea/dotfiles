@@ -2,6 +2,60 @@ set encoding=utf-8
 syntax on
 colorscheme desert
 
+"NeoBundle Scripts-----------------------------
+if &compatible
+ set nocompatible               " Be iMproved
+endif
+
+" Required:
+set runtimepath+=/Users/beta_chelsea/.vim/bundle/neobundle.vim/
+
+" Required:
+call neobundle#begin(expand('/Users/beta_chelsea/.vim/bundle'))
+
+" Let NeoBundle manage NeoBundle
+" Required:
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" Add or remove your Bundles here:
+NeoBundle 'Shougo/neosnippet.vim'
+NeoBundle 'Shougo/neosnippet-snippets'
+"NeoBundle 'tpope/vim-fugitive'
+"NeoBundle 'ctrlpvim/ctrlp.vim'
+NeoBundle 'flazz/vim-colorschemes'
+NeoBundle 'Shougo/vimproc' " 非同期処理
+NeoBundle 'Shougo/neocomplcache' " 入力補完
+NeoBundle 'scrooloose/syntastic' " 構文エラーチェック
+"NeoBundle 'tpope/vim-rails' " Rails向けコマンド提供
+NeoBundle 'tpope/vim-endwise' " end自動挿入
+"NeoBundle 'tomtom/tcomment_vim' " コメント簡易挿入
+NeoBundle 'thinca/vim-quickrun' " 簡易コード実行
+
+" 見た目系プラグイン
+NeoBundle 'nathanaelkane/vim-indent-guides' " インデントに色をつけて見やすく
+NeoBundle 'vim-scripts/AnsiEsc.vim' " ログファイル色付け
+NeoBundle 'kchmck/vim-coffee-script' " for .coffee
+NeoBundle 'slim-template/vim-slim.git' " for .slim
+NeoBundle 'elzr/vim-json' " for JSON
+NeoBundle 'digitaltoad/vim-jade' " for Jade, TODO: $ sudo npm install -g jade
+NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}} " for javascript
+NeoBundle 'vim-ruby/vim-ruby' " for ruby
+NeoBundle 'nono/vim-handlebars' " for Handlebars
+
+" You can specify revision/branch/tag.
+NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
+
+" Required:
+call neobundle#end()
+
+" Required:
+filetype plugin indent on
+
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck
+"End NeoBundle Scripts-------------------------
+
 "行番号を表示する
 set number
 "不可視文字の表示
@@ -67,7 +121,7 @@ if has('gui_macvim')
     set transparency=50
 endif
 
-" *-----------neocomplcache-------------*
+"neocomplcache-----------------------------
 "AutoComplPopを無効にする
 let g:acp_enableAtStartup = 0
 "vim起動時に有効化
@@ -101,49 +155,15 @@ if !exists('g:neocomplcache_delimiter_patterns')
 endif
 let g:neocomplcache_delimiter_patterns.vim = ['#']
 let g:neocomplcache_delimiter_patterns.cpp = ['::']
+"End neocomplcache-------------------------
 
-"*--------------NeoBundle---------------*
-set nocompatible  " be iMproved
-filetype off
-
-if has('vim_starting')
-  set runtimepath+=~/.vim/bundle/neobundle.vim
-  call neobundle#begin(expand('~/.vim/bundle'))
-endif
-
-NeoBundle 'Shougo/neobundle.vim'
-NeoBundle 'Shougo/vimproc'
-NeoBundle 'VimClojure'
-NeoBundle 'Shougo/vimshell'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/neocomplcache'
-NeoBundle 'Shougo/neosnippet'
-NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle 'jpalardy/vim-slime'
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'tpope/vim-rails' " Rails向けコマンド提供
-NeoBundle 'tpope/vim-endwise' " Rubyでend自動挿入
-NeoBundle 'tomtom/tcomment_vim' " コメントON/OFF
-NeoBundle 'nathanaelkane/vim-indent-guides' " インデントに色をつけて見やすく
+"neocomplcache-----------------------------
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_auto_colors = 0
 let g:indent_guides_guide_size = 1
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=233
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=235
-NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'vim-scripts/AnsiEsc.vim' " ログファイル色付け
-NeoBundle 'kchmck/vim-coffee-script' " for .coffee
-NeoBundle 'slim-template/vim-slim.git' " for .slim
-NeoBundle 'elzr/vim-json' " for JSON
-NeoBundle 'digitaltoad/vim-jade' " for Jade, TODO: $ sudo npm install -g jade
-NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}} " for javascript
-NeoBundle 'vim-ruby/vim-ruby' " for ruby
-NeoBundle 'nono/vim-handlebars' " for Handlebars
-
-call neobundle#end()
-filetype plugin indent on
-filetype indent on
-syntax on
+"autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=233
+"autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=235
+"End vim-indent-guides-------------------------
 
 " Enable omni completion.
 autocmd FileType python set omnifunc=pythoncomplete#Complete
