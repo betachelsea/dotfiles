@@ -114,6 +114,8 @@ augroup END
 au BufNewFile,BufRead * set iminsert=0
 "タブ幅をリセット
 au BufNewFile,BufRead * set tabstop=2 shiftwidth=2
+" バックスペース有効
+set backspace=indent,eol,start
 
 "コマンドモードでIMEオフ
 set imdisable
