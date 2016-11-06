@@ -26,7 +26,7 @@ NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'Shougo/vimproc' " 非同期処理
 NeoBundle 'Shougo/neocomplcache' " 入力補完
 NeoBundle 'scrooloose/syntastic' " 構文エラーチェック
-"NeoBundle 'tpope/vim-rails' " Rails向けコマンド提供
+NeoBundle 'tpope/vim-rails' " Rails向けコマンド提供
 NeoBundle 'tpope/vim-endwise' " end自動挿入
 "NeoBundle 'tomtom/tcomment_vim' " コメント簡易挿入
 NeoBundle 'thinca/vim-quickrun' " 簡易コード実行
