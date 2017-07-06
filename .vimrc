@@ -189,4 +189,5 @@ autocmd FileType markdown hi! def link markdownItalic LineNr
 " coffeeファイルタイプ
 autocmd BufRead,BufNewFile,BufReadPre *.coffee set filetype=coffee
 autocmd BufNewFile,BufRead *.{jsx*} set filetype=javascript
-
+" vueはhtmlとして扱う
+autocmd BufNewFile,BufRead *.{vue*} set filetype=html
