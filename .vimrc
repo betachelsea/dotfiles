@@ -119,6 +119,10 @@ set backspace=indent,eol,start
 " 文字数制限を意識、unix文化で80桁、github対応で120桁
 let &colorcolumn="80,".join(range(120,999),",")
 highlight ColorColumn ctermbg=235 guibg=#EEA489
+" 折りたたみ
+set foldenable
+set foldmethod=indent
+set foldlevel=4
 
 "コマンドモードでIMEオフ
 set imdisable
