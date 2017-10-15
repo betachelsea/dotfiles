@@ -7,7 +7,7 @@ export PATH=$HOME/bin:/usr/local/bin:$ANDROID_TOOLS:$NODEBREW:$PATH
 ZSH_THEME="amuse"
 plugins=(git ruby osx bundler brew rails)
 
-eval "$(rbenv init -)"
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 alias rm=rmtrash
 
