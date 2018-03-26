@@ -6,6 +6,7 @@ export PKG_CONFIG_PATH=/usr/local/Cellar/imagemagick@6/6.9.9-20/lib/pkgconfig
 export PATH=$HOME/bin:/usr/local/bin:$ANDROID_PLATFORM_TOOLS:$ANDROID_TOOLS:$NODEBREW:$PATH
 export PATH=$HOME/.yarn/bin:$PATH
 export PATH=/usr/local/Cellar/openssl/1.0.2n/bin:$PATH
+export PATH=/usr/local/Cellar/postgresql/10.0/bin:$PATH
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
