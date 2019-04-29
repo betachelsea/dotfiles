@@ -158,6 +158,8 @@ let g:neocomplcache_ctags_program = '/opt/local/bin/ctags'
 "tabで補完候補の選択を行う
 inoremap <expr><TAB> pumvisible() ? "\<Down>" : "\<TAB>"
 inoremap <expr><S-TAB> pumvisible() ? "\<Up>" : "\<S-TAB>"
+" Suggest several candidates if exists on jumping to definition
+nnoremap <C-]> g<C-]>
 "区切り文字パターンの定義
 if !exists('g:neocomplcache_delimiter_patterns')
 	let g:neocomplcache_delimiter_patterns= {}
