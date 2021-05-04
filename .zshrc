@@ -21,9 +21,6 @@ export PATH="/usr/local/heroku/bin:$PATH"
 ### for nodebrew
 export PATH="$HOME/.nodebrew/current/bin:$PATH"
 
-### for phpenv & rbenv
-export PHPENV_ROOT=$HOME/.phpenv
-export PATH="$PATH:$PHPENV_ROOT/bin"
+### for rbenv
 eval "$(rbenv init -)"
-eval "$(phpenv init -)"
 
