@@ -41,15 +41,28 @@ NeoBundle 'digitaltoad/vim-jade' " for Jade, TODO: $ sudo npm install -g jade
 NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}} " for javascript
 NeoBundle 'vim-ruby/vim-ruby' " for ruby
 NeoBundle 'nono/vim-handlebars' " for Handlebars
+NeoBundle 'leafgarland/typescript-vim' " for typescript
 
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
+
+" for eslint, ref: https://dackdive.hateblo.jp/entry/2016/04/28/090000
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'pmsorhaindo/syntastic-local-eslint.vim'
 
 " Required:
 call neobundle#end()
 
 " Required:
 filetype plugin indent on
+
+" eslint
+let g:syntastic_javascript_checkers=['eslint']
+let g:syntastic_enable_signs = 1
+let g:syntastic_always_populate_loc_list = 0
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
@@ -158,6 +171,8 @@ let g:neocomplcache_ctags_program = '/opt/local/bin/ctags'
 "tabで補完候補の選択を行う
 inoremap <expr><TAB> pumvisible() ? "\<Down>" : "\<TAB>"
 inoremap <expr><S-TAB> pumvisible() ? "\<Up>" : "\<S-TAB>"
+" Suggest several candidates if exists on jumping to definition
+nnoremap <C-]> g<C-]>
 "区切り文字パターンの定義
 if !exists('g:neocomplcache_delimiter_patterns')
 	let g:neocomplcache_delimiter_patterns= {}
@@ -183,6 +198,7 @@ autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType c set omnifunc=ccomplete#Complete
 autocmd FileType ruby set omnifunc=rubycomplete#Complete
+autocmd BufRead,BufNewFile *.ts set filetype=typescript
 ".mdファイルをMarkdownとして扱う
 autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
 autocmd FileType markdown hi! def link markdownItalic LineNr
