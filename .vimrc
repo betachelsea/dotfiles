@@ -46,11 +46,23 @@ NeoBundle 'leafgarland/typescript-vim' " for typescript
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
 
+" for eslint, ref: https://dackdive.hateblo.jp/entry/2016/04/28/090000
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'pmsorhaindo/syntastic-local-eslint.vim'
+
 " Required:
 call neobundle#end()
 
 " Required:
 filetype plugin indent on
+
+" eslint
+let g:syntastic_javascript_checkers=['eslint']
+let g:syntastic_enable_signs = 1
+let g:syntastic_always_populate_loc_list = 0
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
