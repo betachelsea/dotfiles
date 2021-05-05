@@ -1,0 +1,23 @@
+[core]
+  editor = vim
+  excludesfile = ~/.gitignore_global
+  whitespace = cr-at-eol
+[user]
+  name = betachelsea
+  email = beta.chelsea@gmail.com
+[prompt]
+  showinfo = true
+[commit]
+  verbose = true
+[rebase]
+  autosquash = true
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+[alias]
+  st = status
+  logg = log --oneline --graph
+[http]
+  postBuffer = 524288000

@@ -7,6 +7,9 @@ $ git clone git@github.com:betachelsea/dotfiles.git
 $ mkdir ~/vimbackup
 $ ln -s ~/dotfiles/.vimrc ~/.vimrc
 
+$ ln -s ~/dotfiles/.gitconfig ~/.gitconfig
+$ ln -s ~/dotfiles/.gitignore_global ~/.gitignore_global
+
 # preztoの設定
 $ zsh
 $ git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
