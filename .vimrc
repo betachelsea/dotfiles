@@ -118,6 +118,8 @@ set autoindent
 "set lines=50
 "横幅
 "set columns=150
+"プレビュー不要
+set completeopt-=preview
 "入力モード時、ステータスラインのカラーを変更
 augroup InsertHook
 autocmd!
