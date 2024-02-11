@@ -42,6 +42,7 @@ NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascr
 NeoBundle 'vim-ruby/vim-ruby' " for ruby
 NeoBundle 'nono/vim-handlebars' " for Handlebars
 NeoBundle 'leafgarland/typescript-vim' " for typescript
+NeoBundle 'posva/vim-vue' " for Vue
 
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
@@ -205,5 +206,5 @@ autocmd FileType markdown hi! def link markdownItalic LineNr
 " coffeeファイルタイプ
 autocmd BufRead,BufNewFile,BufReadPre *.coffee set filetype=coffee
 autocmd BufNewFile,BufRead *.{jsx*} set filetype=javascript
-" vueはhtmlとして扱う
-autocmd BufNewFile,BufRead *.{vue*} set filetype=html
+" vueはjavascriptとして扱う
+"autocmd BufNewFile,BufRead *.{vue*} set filetype=javascript
