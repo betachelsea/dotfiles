@@ -204,4 +204,4 @@ autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
 autocmd FileType markdown hi! def link markdownItalic LineNr
 autocmd BufRead,BufNewFile,BufReadPre *.coffee set filetype=coffee
 autocmd BufNewFile,BufRead *.{jsx*} set filetype=javascript
-"autocmd BufNewFile,BufRead *.{vue*} set filetype=javascript
+autocmd BufNewFile,BufRead *.{vue*} set filetype=javascript
