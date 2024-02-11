@@ -3,8 +3,9 @@
   excludesfile = ~/.gitignore_global
   whitespace = cr-at-eol
 [user]
-  name = betachelsea
+  name = beta_chelsea
   email = beta.chelsea@gmail.com
+  username = betachelsea
 [prompt]
   showinfo = true
 [commit]
