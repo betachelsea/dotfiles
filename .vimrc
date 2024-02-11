@@ -42,6 +42,7 @@ NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascr
 NeoBundle 'vim-ruby/vim-ruby' " for ruby
 NeoBundle 'nono/vim-handlebars' " for Handlebars
 NeoBundle 'leafgarland/typescript-vim' " for typescript
+NeoBundle 'posva/vim-vue' " for Vue
 
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
@@ -117,6 +118,8 @@ set autoindent
 "set lines=50
 "横幅
 "set columns=150
+"プレビュー不要
+set completeopt-=preview
 "入力モード時、ステータスラインのカラーを変更
 augroup InsertHook
 autocmd!
@@ -199,11 +202,8 @@ autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType c set omnifunc=ccomplete#Complete
 autocmd FileType ruby set omnifunc=rubycomplete#Complete
 autocmd BufRead,BufNewFile *.ts set filetype=typescript
-".mdファイルをMarkdownとして扱う
 autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
 autocmd FileType markdown hi! def link markdownItalic LineNr
-" coffeeファイルタイプ
 autocmd BufRead,BufNewFile,BufReadPre *.coffee set filetype=coffee
 autocmd BufNewFile,BufRead *.{jsx*} set filetype=javascript
-" vueはhtmlとして扱う
-autocmd BufNewFile,BufRead *.{vue*} set filetype=html
+autocmd BufNewFile,BufRead *.{vue*} set filetype=javascript
