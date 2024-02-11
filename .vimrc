@@ -200,11 +200,8 @@ autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType c set omnifunc=ccomplete#Complete
 autocmd FileType ruby set omnifunc=rubycomplete#Complete
 autocmd BufRead,BufNewFile *.ts set filetype=typescript
-".mdファイルをMarkdownとして扱う
 autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
 autocmd FileType markdown hi! def link markdownItalic LineNr
-" coffeeファイルタイプ
 autocmd BufRead,BufNewFile,BufReadPre *.coffee set filetype=coffee
 autocmd BufNewFile,BufRead *.{jsx*} set filetype=javascript
-" vueはjavascriptとして扱う
 "autocmd BufNewFile,BufRead *.{vue*} set filetype=javascript
